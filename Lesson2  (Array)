@@ -1,0 +1,12 @@
+                                    Array (Massiv) Metodları
+
+JavaScript-də massivlər (arrays) məlumatları ardıcıl şəkildə saxlamaq üçün istifadə olunur. 
+Massivlər üzərində müxtəlif əməliyyatlar aparmaq üçün bir çox metod mövcuddur:
+
+* push() – Massivin sonuna yeni element əlavə edir.
+* pop() – Massivin sonuncu elementini silir və geri qaytarır.
+* shift() – Massivin ilk elementini silir və geri qaytarır.
+* unshift() – Massivin əvvəlinə yeni element əlavə edir.
+* forEach() – Massivin hər bir elementi üzərində dövr edir və hər element üçün təyin olunmuş funksiyanı icra edir.
+* map() – Massivin hər bir elementi üzərində əməliyyat aparır və nəticələri yeni massivdə geri qaytarır.
+* filter() – Şərtə uyğun olan elementləri seçərək yeni bir massiv yaradır.

@@ -1,0 +1,27 @@
+JavaScript-də bir HTML elementini əlavə etmək üçün document.createElement() metodundan istifadə edilir. 
+Bu metodla yeni bir HTML elementi yaradılır. Daha sonra həmin elementi mövcud bir elementə əlavə etmək üçün appendChild() metodu istifadə olunur.
+
+document.createElement(tagName) – Yeni bir element yaradır. tagName parametri yaradılacaq elementin adını təyin edir (məsələn, "div", "p").
+appendChild(node) – Mövcud bir elementin sonuna yeni element (node) əlavə edir.
+
+
+                                DOM Manipulyasiya
+
+
+JavaScript-də Document Object Model (DOM) vasitəsilə veb səhifənin strukturunu dəyişdirmək mümkündür. DOM manipulyasiya metodları:
+
+* document.getElementById(id) – Verilən id dəyərinə malik elementi qaytarır.
+* document.querySelector(selector) – CSS seçicisinə uyğun ilk elementi qaytarır.
+* innerHTML – Elementin daxili məzmununu dəyişdirmək üçün istifadə olunur.
+* style.property – Elementin stilini dəyişdirmək üçün istifadə edilir (məsələn, style.color = 'red').
+
+                                Event Listeners (Hadisə Dinləyiciləri)
+
+JavaScript-də hadisələri (events) izləmək üçün addEventListener() metodu istifadə olunur. Bu metod vasitəsilə klik, klaviatura hadisələri kimi müxtəlif hadisələrə reaksiya vermək mümkündür.
+
+addEventListener(type, function) – Müəyyən hadisə baş verdikdə təyin olunmuş funksiyanı işə salır.
+
+Məsələn:
+
+* click – Elementə klik edildikdə tetiklenir.
+* keyup – Klaviatura düyməsi buraxıldıqda tetiklenir.
