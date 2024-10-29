@@ -1,0 +1,28 @@
+                                Funksiya (Function) və Arrow Function
+
+JavaScript-də funksiyalar müəyyən əməliyyatları təkrar-təkrar yerinə yetirmək üçün istifadə olunur.
+
+Function Declaration – Ənənəvi funksiyalar function açar sözü ilə elan edilir.
+Arrow Function – Daha qısa yazılışlı funksiyalar. => simvolu ilə təyin olunur.
+Funksiyalar parametrləri qəbul edə və geri dəyər qaytara bilər. 
+Arrow funksiyalar isə daha qısa sintaksisə malikdir və xüsusilə this kontekstində fərqli davranır.
+
+
+
+                                    Şərt Blokları (if, else if, else)
+
+JavaScript-də şərt blokları müəyyən şərtlərin yerinə yetirilməsindən asılı olaraq fərqli əməliyyatların icrasını təmin edir.
+
+* if (şərt) – Şərt doğru olarsa, bu blokdakı əməliyyatlar yerinə yetirilir.
+* else if (şərt) – Əgər ilk şərt doğru deyilsə və bu şərt doğru olarsa, bu blok icra edilir.
+* else – Əgər heç bir şərt doğru deyilsə, bu blok icra edilir.
+
+
+                                        Dövr Blokları (for, while, do while)
+
+Dövr operatorları təkrarlanan əməliyyatları həyata keçirmək üçün istifadə olunur.
+
+for (başlanğıc; şərt; artma/azalma) – Təkrarlanacaq əməliyyatları müəyyən bir şərt yerinə yetirilənə qədər icra edir.
+while (şərt) – Şərt doğru olduğu müddətdə əməliyyatları təkrarlayır.
+do while – Əvvəlcə əməliyyatları icra edir, sonra şərti yoxlayır. Şərt doğru olarsa, dövr davam edir.
+

@@ -1,0 +1,9 @@
+                                Object (Obyekt) Metodları
+
+JavaScript obyektləri (objects) açar-dəyər (key-value) cütlərini saxlamaq üçün istifadə olunur. Obyektlərdə müxtəlif metodlar mövcuddur:
+
+* Object.keys(obj) – Obyektin bütün açarlarını (key) massiv şəklində geri qaytarır.
+* Object.values(obj) – Obyektin bütün dəyərlərini (value) massiv şəklində geri qaytarır.
+* Object.entries(obj) – Obyektin açar-dəyər cütlərini iki elementli massivlər şəklində qaytarır.
+* hasOwnProperty(key) – Obyektin müəyyən açara malik olub-olmadığını yoxlayır.
+* delete obj.key – Obyektdən müəyyən açarı və onun dəyərini silir.

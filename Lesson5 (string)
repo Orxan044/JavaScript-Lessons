@@ -1,0 +1,86 @@
+
+                                        String (Mətn) Metodları
+
+JavaScript-də String tipi, mətni saxlamaq üçün istifadə olunur. 
+String tipinin müxtəlif metodları var ki, bunlar mətni manipulyasiya etməyə imkan verir.
+
+
+* charAt(index): Verilən indeksdəki simvolu qaytarır.
+Məsələn: "Hello".charAt(1) — "e"
+
+* charCodeAt(index): Verilən indeksdəki simvolun Unicode dəyərini qaytarır.
+Məsələn: "Hello".charCodeAt(1) — 101
+
+* concat(string1, string2, ...): İki və ya daha çox stringi birləşdirir.
+Məsələn: "Hello".concat(" ", "World") — "Hello World" 
+
+* includes(searchString, start): Verilən mətni (searchString) içində axtarır və tapılıb-tapılmadığını bildirir.
+Məsələn: "Hello".includes("e") — true
+
+* indexOf(searchValue, start): Verilən mətni (searchValue) içində axtarır və ilk tapıldığı indeksi qaytarır. Əgər tapılmazsa, -1 qaytarır.
+Məsələn: "Hello".indexOf("l") — 2
+
+* lastIndexOf(searchValue, start): Verilən mətni sağdan sola axtarır və son tapıldığı indeksi qaytarır.
+Məsələn: "Hello".lastIndexOf("l") — 3
+
+* slice(start, end): Verilən başlanğıc və son indekslər arasında olan hissəni qaytarır.
+Məsələn: "Hello".slice(1, 4) — "ell"
+
+* split(separator, limit): Mətni ayrıcı (separator) üzrə parçalayır və bir massiv (array) qaytarır.
+Məsələn: "Hello World".split(" ") — ["Hello", "World"]
+
+* toLowerCase(): Mətni kiçik hərflərə çevirir.
+Məsələn: "Hello".toLowerCase() — "hello"
+
+* toUpperCase(): Mətni böyük hərflərə çevirir.
+Məsələn: "Hello".toUpperCase() — "HELLO"
+
+* trim(): Mətndəki boşluqları (whitespace) başdan və sondan silir.
+Məsələn: " Hello ".trim() — "Hello"
+
+* replace(searchValue, newValue): Verilən mətni (searchValue) yeni mətni (newValue) ilə əvəz edir.
+Məsələn: "Hello World".replace("World", "JavaScript") — "Hello JavaScript"
+
+* length: String-in uzunluğunu qaytarır.
+Məsələn: "Hello".length — 5
+
+* String.fromCharCode(): Verilən Unicode dəyərlərini simvollara çevirir.
+Məsələn: String.fromCharCode(65) — "A"
+
+* localeCompare(): İki stringin lokalizasiyaya uyğun müqayisəsini aparır.
+Məsələn: "a".localeCompare("b") — -1 (a, b-dən kiçikdir)
+
+* padStart(targetLength, padString): Mətni soldan tam uzunluğa çatdırmaq üçün doldurur.
+Məsələn: "5".padStart(2, '0') — "05"
+
+* padEnd(targetLength, padString): Mətni sağdan tam uzunluğa çatdırmaq üçün doldurur.
+Məsələn: "5".padEnd(2, '0') — "50"
+
+* repeat(count): Mətni müəyyən sayda təkrarlayır.
+Məsələn: "abc".repeat(3) — "abcabcabc"
+
+* startsWith(searchString, start): Mətni verilən string ilə başlayıb-başlamadığını yoxlayır.
+Məsələn: "Hello".startsWith("He") — true
+
+* endsWith(searchString, length): Mətni verilən string ilə bitib-bitmədiyini yoxlayır.
+Məsələn: "Hello".endsWith("lo") — true
+
+
+                                    Number (Rəqəm) Metodları
+
+JavaScript-də Number tipi ədədləri saxlamaq üçün istifadə olunur. Number metodları, ədədlərlə müxtəlif əməliyyatlar aparmağa imkan verir.
+
+* isNaN(value): Verilən dəyərin NaN (Not-a-Number) olub olmadığını yoxlayır.
+Məsələn: isNaN("Hello") — true
+
+* isInteger(value): Verilən dəyərin tam ədəd (integer) olub olmadığını yoxlayır.
+Məsələn: Number.isInteger(5) — true
+
+* toFixed(digits): Verilən ədədin onluq hissəsini müəyyən sayda onluq yerə yuvarlaqlaşdırır.
+Məsələn: (123.456).toFixed(2) — "123.46"
+
+* parseInt(string, radix): String-i tam ədədə çevirir. İkinci parametr radix (dəstək sistemi) təyin edir (məsələn, 10 - onluq).
+Məsələn: parseInt("10") — 10
+
+* parseFloat(string): String-i onluq ədədə çevirir.
+Məsələn: parseFloat("10.5") — 10.5
