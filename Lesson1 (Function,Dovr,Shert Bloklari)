@@ -7,6 +7,8 @@ Arrow Function – Daha qısa yazılışlı funksiyalar. => simvolu ilə təyin 
 Funksiyalar parametrləri qəbul edə və geri dəyər qaytara bilər. 
 Arrow funksiyalar isə daha qısa sintaksisə malikdir və xüsusilə this kontekstində fərqli davranır.
 
+Funkisya ve const function ile ferqi odur ki => Function() ile yazildiqda istelinen yerde chagirmaq olur const ile olursa olmur.
+
 
 
                                     Şərt Blokları (if, else if, else)

@@ -1,0 +1,17 @@
+JavaScript-də asinxron əməliyyatlar sinkron əməliyyatlardan fərqlənir. 
+Sinkron əməliyyatlarda hər bir kod xətti ardıcıl olaraq icra olunur, yəni bir əməliyyat tamamlanmadan digər əməliyyat başlamır. 
+Lakin, asinxron əməliyyatlarda eyni zamanda bir neçə proses işə düşə bilər və biri bitənə qədər digərləri gözləməz. 
+Bu xüsusilə şəbəkə üzərindən data fetching (məlumat alma) zamanı çox faydalıdır, çünki məlumatların yüklənməsi müəyyən vaxt ala bilər.
+
+İlk olaraq, asinxron JavaScript-də callback functions mövcuddur. 
+Bu üsulda bir əməliyyat tamamlandıqdan sonra başqa bir funksiya çağırılır. 
+Lakin callback-lər çox mürəkkəb kod strukturu yarada bilər, buna görə daha yeni üsullar ortaya çıxıb.
+
+Daha müasir yanaşma isə Promises (vəd) vasitəsilə həyata keçirilir. 
+Promise-lər asinxron əməliyyatların nəticəsini vəd edən obyektlərdir. 
+Bu obyektlər müəyyən müddət "gözləmə" vəziyyətində olur və ya uğurlu (resolved) və ya uğursuz (rejected) şəkildə yekunlaşır. 
+Promise-lər sayəsində kod daha səliqəli və asan anlaşılan olur.
+
+async/await isə Promise-lərin istifadəsini daha da sadələşdirir. 
+Bu metod, Promise-lər ilə işləyərkən kodu demək olar ki, sinkron görünüşdə yazmağa imkan verir, lakin əslində asinxron icra olunur. 
+await sözü bir Promise-in nəticəsini gözləyir və əgər Promise uğurlu olarsa, nəticəni qaytarır. Əgər uğursuz olarsa, səhv atır.
