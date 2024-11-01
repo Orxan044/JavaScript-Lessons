@@ -1,0 +1,73 @@
+// 1. Create (POST - Yeni məlumat yaratmaq)
+
+const yeniMelumat = {
+  name: 'Yeni Məhsul',
+  price: 100,
+  description: 'Bu yeni bir məhsuldur'
+};
+
+fetch('https://example.com/api/products', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(yeniMelumat)
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('Məlumat yaradıldı:', data);
+  })
+  .catch(error => {
+    console.error('Xəta baş verdi:', error);
+});
+
+// 2. Read (GET - Məlumatı oxumaq)
+
+fetch('https://example.com/api/products')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Məlumatlar:', data);
+  })
+  .catch(error => {
+    console.error('Xəta baş verdi:', error);
+});
+
+// 3. Update (PUT - Məlumatı yeniləmək)
+
+const yenilenecekMelumat = {
+    name: 'Yenilənmiş Məhsul',
+    price: 150,
+    description: 'Bu məhsul yenilənmişdir'
+  };
+  
+  fetch('https://example.com/api/products/1', { // "1" yenilənəcək məhsulun ID-sidir
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(yenilenecekMelumat)
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Məlumat yeniləndi:', data);
+    })
+    .catch(error => {
+      console.error('Xəta baş verdi:', error);
+});
+  
+// 4. Delete (DELETE - Məlumatı silmək)
+
+fetch('https://example.com/api/products/1', { // "1" silinəcək məhsulun ID-sidir
+    method: 'DELETE'
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Məlumat uğurla silindi');
+      } else {
+        console.error('Silinmə zamanı xəta baş verdi');
+      }
+    })
+    .catch(error => {
+      console.error('Xəta baş verdi:', error);
+});
+  
