@@ -1,4 +1,6 @@
-// 1. Create (POST - Yeni məlumat yaratmaq)
+
+
+//////////////////////////////////// 1. Create (POST - Yeni məlumat yaratmaq)   ////////////////////////////////////////
 
 const yeniMelumat = {
   name: 'Yeni Məhsul',
@@ -21,7 +23,8 @@ fetch('https://example.com/api/products', {
     console.error('Xəta baş verdi:', error);
 });
 
-// 2. Read (GET - Məlumatı oxumaq)
+///////////////////////////////////////// 2. Read (GET - Məlumatı oxumaq) ///////////////////////////////////////////////
+
 
 fetch('https://example.com/api/products')
   .then(response => response.json())
@@ -32,7 +35,9 @@ fetch('https://example.com/api/products')
     console.error('Xəta baş verdi:', error);
 });
 
-// 3. Update (PUT - Məlumatı yeniləmək)
+
+///////////////////////////////////////// 3. Update (PUT - Məlumatı yeniləmək) //////////////////////////////////////////
+
 
 const yenilenecekMelumat = {
     name: 'Yenilənmiş Məhsul',
@@ -55,7 +60,9 @@ const yenilenecekMelumat = {
       console.error('Xəta baş verdi:', error);
 });
   
-// 4. Delete (DELETE - Məlumatı silmək)
+///////////////////////////////////////// 4. Delete (DELETE - Məlumatı silmək) //////////////////////////////////////////
+
+
 
 fetch('https://example.com/api/products/1', { // "1" silinəcək məhsulun ID-sidir
     method: 'DELETE'
