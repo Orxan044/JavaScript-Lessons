@@ -1,0 +1,127 @@
+        
+                                        OOP nədir?
+                                        
+OOP proqramlaşdırma metodologiyasıdır və proqramı obyektlər vasitəsilə strukturlaşdırmağa imkan verir. 
+Bu obyektlər real dünyadakı varlıqların xüsusiyyətlərini (properties) və davranışlarını (methods) əks etdirir.
+JavaScript-də OOP dörd əsas prinsip üzərində qurulub:
+
+                            Encapsulation (Qapalılıq):
+
+Məlumatları (properties) və funksiyaları (methods) bir obyektin daxilində birləşdirir.
+Məlumatlara yalnız müəyyən funksiyalar vasitəsilə giriş mümkündür.
+
+                                Inheritance (İrsi əlaqə):
+
+Bir obyekt digərindən xüsusiyyətləri və metodları miras ala bilər. Bu, kodun təkrar istifadəsini asanlaşdırır.
+
+
+                             Polymorphism (Çoxformallıq):
+
+Eyni interfeysə malik olan müxtəlif obyektlər fərqli davranışlar nümayiş etdirə bilər.
+
+                                    Abstraction (Abstraksiya):
+
+İstifadəçini yalnız lazım olan məlumatlarla təmin edir, detallar gizlədilir.
+JavaScript-də OOP
+JavaScript-də OOP əsasən obyektlər və "class" (ES6 ilə gəlib) vasitəsilə həyata keçirilir. Gəlin əsas məqamları görək:
+
+                            1. Obyekt Yaradılması
+
+JavaScript-də obyektlər sadəcə key-value cütlükləri kimi yaradılır:
+
+const car = {
+  brand: "Toyota",
+  model: "Corolla",
+  start: function () {
+    console.log(`${this.brand} ${this.model} işə düşdü!`);
+  },
+};
+
+car.start(); // Toyota Corolla işə düşdü!
+
+                            2. Constructor Function (Konstruktor Funksiyaları)
+
+Əvvəl ES6-ya qədər JavaScript-də "class" yox idi. Konstruktor funksiyaları ilə obyekt yaratmaq adi hal idi:
+
+function Car(brand, model) {
+  this.brand = brand;
+  this.model = model;
+
+  this.start = function () {
+    console.log(`${this.brand} ${this.model} işə düşdü!`);
+  };
+}
+
+const car1 = new Car("Toyota", "Corolla");
+const car2 = new Car("Honda", "Civic");
+
+car1.start(); // Toyota Corolla işə düşdü!
+car2.start(); // Honda Civic işə düşdü!
+
+                                    3. Prototypes və İrsi Əlaqə
+
+Prototypes obyektlərə metodlar və xüsusiyyətlər əlavə etməyə imkan verir:
+
+function Car(brand, model) {
+  this.brand = brand;
+  this.model = model;
+}
+
+Car.prototype.start = function () {
+  console.log(`${this.brand} ${this.model} işə düşdü!`);
+};
+
+const car1 = new Car("Toyota", "Corolla");
+const car2 = new Car("Honda", "Civic");
+
+car1.start(); // Toyota Corolla işə düşdü!
+car2.start(); // Honda Civic işə düşdü!
+
+                                    4. ES6 ilə Class-lar
+ES6 ilə "class" sintaksisi gəldi, bu da OOP-nu daha oxunaqlı etdi:
+
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+
+  start() {
+    console.log(`${this.brand} ${this.model} işə düşdü!`);
+  }
+}
+
+const car1 = new Car("Toyota", "Corolla");
+const car2 = new Car("Honda", "Civic");
+
+car1.start(); // Toyota Corolla işə düşdü!
+car2.start(); // Honda Civic işə düşdü!
+
+                                        5. İrsi əlaqə (Inheritance)
+extends və super ilə irsi əlaqə qurmaq:
+
+class Vehicle {
+  constructor(type) {
+    this.type = type;
+  }
+
+  describe() {
+    console.log(`Bu bir ${this.type}-dır.`);
+  }
+}
+
+class Car extends Vehicle {
+  constructor(brand, model) {
+    super("Maşın"); // Parent class-ın constructor funksiyasını çağırır
+    this.brand = brand;
+    this.model = model;
+  }
+
+  start() {
+    console.log(`${this.brand} ${this.model} işə düşdü!`);
+  }
+}
+
+const myCar = new Car("Toyota", "Corolla");
+myCar.describe(); // Bu bir Maşın-dır.
+myCar.start(); // Toyota Corolla işə düşdü!

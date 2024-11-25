@@ -1,0 +1,23 @@
+
+
+JQuery, JavaScript-in populyar kitabxanasıdır və veb inkişafında geniş istifadə olunur. 
+Onun əsas məqsədi JavaScript-in istifadəsini sadələşdirmək, DOM manipulyasiyasını asanlaşdırmaq və müxtəlif brauzerlər arasında uyğunluğu təmin etməkdir.
+
+Gəlin, jQuery haqqında əsas məqamları nəzərdən keçirək:
+
+                                JQuery nədir?
+
+Sadə API: jQuery çox asan sintaksis təqdim edir.
+DOM Manipulyasiyası: HTML elementlərini seçmək, dəyişdirmək və DOM strukturu ilə işləmək üçün güclü alətlər təqdim edir.
+Hadisə İdarəçiliyi: Brauzer hadisələrini idarə etmək üçün sadə və effektiv metodlar təklif edir.
+AJAX: Asinxron HTTP sorğuları (AJAX) göndərmək və serverdən məlumat almaq üçün asan yollar təqdim edir.
+Brauzer Uyğunluğu: jQuery müxtəlif brauzerlər arasında kodun işləməsini təmin edir.
+
+
+
+                                Niyə jQuery istifadə olunur?
+                                
+JavaScript-i qısa və oxunaqlı edir.
+Tez-tez lazım olan funksionallıqları asanlaşdırır.
+Köhnə brauzerlərlə işləmək üçün idealdır.
+Plugin-ləri vasitəsilə genişlənə bilər.
