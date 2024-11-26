@@ -1,0 +1,155 @@
+
+
+                                                TypeScript nədir?
+
+JavaScript-in superset-i (üst dəsti):
+
+TypeScript, JavaScript kodunu birbaşa qəbul edir, yəni mövcud JavaScript fayllarını TypeScript faylı kimi işlədə bilərsiniz.
+TypeScript kodu JavaScript-ə kompilyasiya olunur, beləliklə, brauzerlər və Node.js ilə tam uyğun işləyir.
+
+                                                        Tip Sistemi:
+
+TypeScript-ə güclü tiplər əlavə edir (məsələn, string, number, boolean).
+Kodunuzu daha aydın, etibarlı və səhv tapmağa kömək edir.
+
+                                            TypeScript-in Xüsusiyyətləri
+
+Statik Tipə Nəzarət:
+
+JavaScript-də tiplər dinamikdir (runtime zamanı təyin edilir). TypeScript isə statik tiplər istifadə edir və tipləri tərtibat vaxtında yoxlayır.
+Məsələn:
+let name: string = "Ali"; // Düzgün
+name = 42; // Səhv: 'number' 'string' tipinə təyin edilə bilməz.
+
+                                                ES6+ Xüsusiyyət Dəstəyi:
+
+ES6 və daha yeni JavaScript xüsusiyyətlərini təqdim edir və geriyə uyğun olaraq ES5 və ya ES3-ə kompilyasiya edə bilir.
+
+                                                Interfaces (İnterfeyslər):
+
+Mürəkkəb obyektlərin strukturunu müəyyən etmək üçün istifadə olunur.
+
+interface User {
+  id: number;
+  name: string;
+  isActive: boolean;
+}
+
+let user: User = { id: 1, name: "Ali", isActive: true };
+Classes və İrsi Əlaqə:
+
+ES6-dakı "class"-lara əlavə olaraq TypeScript daha güclü xüsusiyyətlər təklif edir:
+
+class Animal {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  move(distance: number): void {
+    console.log(`${this.name} ${distance} metr getdi.`);
+  }
+}
+
+class Dog extends Animal {
+  bark(): void {
+    console.log("Hav-hav!");
+  }
+}
+
+let dog = new Dog("Rex");
+dog.bark(); // Hav-hav!
+dog.move(10); // Rex 10 metr getdi.
+Generics (Ümumi Tiplər):
+
+Məlumatın müxtəlif tiplərini istifadə edə bilən çevik komponentlər yaratmaq üçün istifadə olunur.
+
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+console.log(identity<string>("Hello")); // Hello
+console.log(identity<number>(123)); // 123
+Modules (Modullar):
+
+Kodun təşkil olunmasını və yenidən istifadəni asanlaşdırır.
+
+// math.ts
+export function add(a: number, b: number): number {
+  return a + b;
+}
+
+// main.ts
+import { add } from "./math";
+console.log(add(2, 3)); // 5
+Enum-lar:
+
+Təyin olunmuş sabitlər toplusunu təmsil edir.
+
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+}
+
+let move = Direction.Up;
+console.log(move); // 1
+Type Aliases və Union Tipləri:
+
+Bir neçə tipləri birləşdirmək və ya yeni tip yaratmaq üçün istifadə olunur.
+
+type ID = string | number;
+
+let userId: ID = 123; // Düzgün
+userId = "ABC"; // Düzgün
+
+                    TypeScript və JavaScript Arasındakı Fərqlər
+
+Xüsusiyyət	            JavaScript	                        TypeScript
+
+Tip yoxlaması	        Runtime zamanı	                    Compile zamanı
+Tiplər	                Dinamik	                    Statik və ya Dinamik seçilə bilər
+İnterfeyslər	        Yox	                                    Var
+Kompilyasiya	        Lazım deyil	                JavaScript-ə kompilyasiya edilir
+
+
+                                    TypeScript-i Necə İşlətmək olar?
+
+TypeScript-in Qurulması:
+
+npm install -g typescript
+TypeScript Faylının Kompilyasiyası:
+
+
+tsc filename.ts
+Bu əmrdən sonra .js faylı yaradılacaq.
+
+tsconfig.json Faylı: TypeScript layihəsi üçün konfiqurasiya faylıdır:
+
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "strict": true
+  }
+}
+                                            TypeScript Harada və Niyə İstifadə Olunur?
+
+Böyük Layihələrdə:
+
+Kodun daha yaxşı strukturlaşdırılması və dəstəklənməsi üçün istifadə olunur.
+Statik tip yoxlaması inkişaf dövründə xətaların qarşısını alır.
+Framework və Kitabxanalarda:
+
+Angular TypeScript-dən tam istifadə edir.
+React və Vue ilə də istifadə etmək mümkündür.
+Kodun Oxunaqlılığını və Təhlükəsizliyini Artırır:
+
+Komandada işləyərkən kodun aydın və təhlükəsiz olmasını təmin edir.
+Nəticə
+TypeScript proqramlaşdırma prosesini asanlaşdırır və böyük layihələr üçün xüsusilə faydalıdır.
+Əgər JavaScript bilirsinizsə, TypeScript öyrənmək çətin olmayacaq. 
+Daha yaxşı tərtibat vaxtı yoxlaması, daha az runtime xətası və güclü inkişaf vasitələri üçün TypeScript müasir veb inkişafında əvəzolunmazdır.
+
